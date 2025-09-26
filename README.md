@@ -23,16 +23,6 @@ Dashboard/
 └── README.md             # This file
 ```
 
-## Features
-
-- **Real-time Monitoring**: Live updates every 2 seconds
-- **Multi-Script Support**: Monitor unlimited scripts simultaneously
-- **Dual Communication**: HTTP or file-based data transfer
-- **Performance Metrics**: XP tracking, rates, runtime, custom metrics
-- **Clean UI**: Modern dark theme with responsive design
-- **State History**: Track state transitions over time
-- **Alerts**: Configurable alerts for specific conditions
-
 ## Quick Start
 
 ### 1. Install Backend
@@ -167,33 +157,6 @@ Dashboard:chart("xpTrend", {
     data = {15000, 30000, 42000}
 })
 ```
-
-## Communication Modes
-
-### HTTP Mode (Recommended)
-
-**Pros:**
-- Real-time updates
-- No file I/O overhead
-- Works across network
-- Clean data flow
-
-**Cons:**
-- May show CMD windows on Windows (use VBS wrapper to avoid)
-- Requires server running
-
-### File Mode
-
-**Pros:**
-- No network dependencies
-- No CMD popups
-- Works offline
-- Simple setup
-
-**Cons:**
-- Slight delay in updates
-- File locking potential
-- Local only
 
 ### Switching Modes
 
@@ -402,35 +365,8 @@ Dashboard/server/data/{CharacterName}_{ScriptName}.json
 
 The server watches this directory and automatically loads updates.
 
-## Troubleshooting
-
-### CMD Popups on Windows
-
-If you see CMD windows when using HTTP mode:
-
-1. The dashboard module includes a VBS wrapper that should prevent this
-2. If still occurring, switch to file mode: `Dashboard:setMode("file")`
-3. Check antivirus isn't blocking the VBS execution
-
-### Server Connection Issues
-
-1. Ensure server is running: `npm start` in server directory
-2. Check firewall isn't blocking port 3000
-3. Verify endpoint URL in Lua config
-
-### File Mode Not Updating
-
-1. Check file permissions in `Dashboard/server/data/`
-2. Ensure no antivirus is blocking file writes
-3. Verify the server's file watcher is running
-
-### React App Not Showing Data
-
-1. Check browser console for errors
-2. Verify server is accessible at configured endpoint
-3. Ensure CORS is properly configured in server
-
 ## License
 
 MIT License - Use freely in your scripts!
+
 
