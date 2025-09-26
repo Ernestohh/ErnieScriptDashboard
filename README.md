@@ -1,6 +1,6 @@
 # Universal Script Dashboard System
 
-A modern React-based dashboard for monitoring RuneScape scripts with dual communication modes (HTTP and file-based).
+A modern React-based dashboard for monitoring MemoryError scripts with dual communication modes (HTTP and file-based).
 
 ## System Architecture
 
@@ -433,3 +433,4 @@ If you see CMD windows when using HTTP mode:
 ## License
 
 MIT License - Use freely in your scripts!
+
